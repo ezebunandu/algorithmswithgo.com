@@ -9,3 +9,11 @@ func Sum(numbers []int) int {
 	}
 	return total
 }
+
+func RecursiveSum(numbers []int) int {
+	if len(numbers) == 0 {
+		return 0
+	} else {
+		return numbers[0] + RecursiveSum(numbers[1:])
+	}
+}
