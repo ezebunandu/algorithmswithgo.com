@@ -12,15 +12,34 @@ import "fmt"
 // `fmt` package and print to standard out.
 // I wouldn't normally recommend this, but did
 // it here to make life easier for beginners.
+// func FizzBuzz(n int) {
+// 	for i := 1; i <= n; i++ {
+// 		if i%3 == 0 && i%5 == 0 {
+// 			fmt.Print("Fizz Buzz")
+// 		} else if i%3 == 0 {
+// 			fmt.Print("Fizz")
+// 		} else if i%5 == 0 {
+// 			fmt.Print("Buzz")
+// 		} else {
+// 			fmt.Print(i)
+// 		}
+// 		if i != n {
+// 			fmt.Print(", ")
+// 		}
+// 	}
+// 	fmt.Println()
+// }
+
 func FizzBuzz(n int) {
 	for i := 1; i <= n; i++ {
-		if i%3 == 0 && i%5 == 0 {
+		switch {
+		case i%3 == 0 && i%5 == 0:
 			fmt.Print("Fizz Buzz")
-		} else if i%3 == 0 {
+		case i%3 == 0:
 			fmt.Print("Fizz")
-		} else if i%5 == 0 {
+		case i%5 == 0:
 			fmt.Print("Buzz")
-		} else {
+		default:
 			fmt.Print(i)
 		}
 		if i != n {
